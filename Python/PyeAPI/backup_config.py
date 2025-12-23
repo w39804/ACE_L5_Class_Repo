@@ -15,7 +15,7 @@ if not exists:
 
 #switches = ['leaf1', 'leaf2', 'leaf3', 'leaf4', 'spine1', 'spine2', 'spine3', 'spine4', 'borderleaf1', 'borderleaf2']
 
-for switch in device_dict:
+for switch in device_dict["switches"]:
     connect = pyeapi.connect(host=switch,username='arista',password='wid4whxyy3ggdaat',return_node=True)
     running_config = connect.get_config(as_string='True')
     path = directory+'/'+switch+'.cfg'
