@@ -1,0 +1,651 @@
+[
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP EVPN Peer: spine1 (IP: 192.168.101.11)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP EVPN Peer: spine2 (IP: 192.168.101.12)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP EVPN Peer: spine3 (IP: 192.168.101.13)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "failure",
+    "messages": [
+      "AFI: evpn Peer: 192.168.101.14 - Incorrect session state - Expected: Established Actual: Active"
+    ],
+    "custom_field": "BGP EVPN Peer: spine4 (IP: 192.168.101.14)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP IPv4 Unicast Peer: leaf4 (IP: 10.255.251.5)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP IPv4 Unicast Peer: spine1 (IP: 192.168.103.16)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP IPv4 Unicast Peer: spine2 (IP: 192.168.103.18)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "success",
+    "custom_field": "BGP IPv4 Unicast Peer: spine3 (IP: 192.168.103.20)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyBGPSpecificPeers",
+    "categories": [
+      "bgp"
+    ],
+    "description": "Verifies the health of specific BGP peer(s) for given address families.",
+    "result": "failure",
+    "messages": [
+      "AFI: ipv4 SAFI: unicast VRF: default Peer: 192.168.103.22 - Incorrect session state - Expected: Established Actual: Idle"
+    ],
+    "custom_field": "BGP IPv4 Unicast Peer: spine4 (IP: 192.168.103.22)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "success",
+    "custom_field": "Local: Ethernet1 - Remote: leaf4 Ethernet1"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "success",
+    "custom_field": "Local: Ethernet2 - Remote: leaf4 Ethernet2"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "success",
+    "custom_field": "Local: Ethernet3 - Remote: spine1 Ethernet5"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "success",
+    "custom_field": "Local: Ethernet4 - Remote: spine2 Ethernet5"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "success",
+    "custom_field": "Local: Ethernet5 - Remote: spine3 Ethernet5"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyLLDPNeighbors",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.",
+    "result": "failure",
+    "messages": [
+      "Port: Ethernet6 Neighbor: spine4.atd.lab Neighbor Port: Ethernet5 - No LLDP neighbors"
+    ],
+    "custom_field": "Local: Ethernet6 - Remote: spine4 Ethernet5"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: leaf1 Loopback0 (IP: 192.168.101.1)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: leaf2 Loopback0 (IP: 192.168.101.2)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: leaf3 Loopback0 (IP: 192.168.101.3)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: leaf4 Loopback0 (IP: 192.168.101.4)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: spine1 Loopback0 (IP: 192.168.101.11)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: spine2 Loopback0 (IP: 192.168.101.12)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: spine3 Loopback0 (IP: 192.168.101.13)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "failure",
+    "messages": [
+      "Host: 192.168.101.14 Source: 192.168.101.3 VRF: default - Packet loss detected - Transmitted: 1 Received: 0"
+    ],
+    "custom_field": "Source: Loopback0 (IP: 192.168.101.3) - Destination: spine4 Loopback0 (IP: 192.168.101.14)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: P2P Interface Ethernet3 (IP: 192.168.103.17) - Destination: spine1 Ethernet5 (IP: 192.168.103.16)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: P2P Interface Ethernet4 (IP: 192.168.103.19) - Destination: spine2 Ethernet5 (IP: 192.168.103.18)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "success",
+    "custom_field": "Source: P2P Interface Ethernet5 (IP: 192.168.103.21) - Destination: spine3 Ethernet5 (IP: 192.168.103.20)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReachability",
+    "categories": [
+      "connectivity"
+    ],
+    "description": "Test network reachability to one or many destination IP(s).",
+    "result": "failure",
+    "messages": [
+      "Ping command 'ping vrf default 192.168.103.22 source 192.168.103.23 size 100 repeat 1' failed with an unexpected message: 'ping: bind: Cannot assign requested address'"
+    ],
+    "custom_field": "Source: P2P Interface Ethernet6 (IP: 192.168.103.23) - Destination: spine4 Ethernet5 (IP: 192.168.103.22)"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyEnvironmentCooling",
+    "categories": [
+      "hardware"
+    ],
+    "description": "Verifies the status of power supply fans and all fan trays.",
+    "result": "skipped",
+    "messages": [
+      "VerifyEnvironmentCooling test is not supported on cEOSLab"
+    ],
+    "custom_field": "Accepted States: 'ok'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyEnvironmentPower",
+    "categories": [
+      "hardware"
+    ],
+    "description": "Verifies the power supplies state and input voltage.",
+    "result": "skipped",
+    "messages": [
+      "VerifyEnvironmentPower test is not supported on cEOSLab"
+    ],
+    "custom_field": "Accepted States: 'ok'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyTemperature",
+    "categories": [
+      "hardware"
+    ],
+    "description": "Verifies if the device temperature is within acceptable limits.",
+    "result": "skipped",
+    "messages": [
+      "VerifyTemperature test is not supported on cEOSLab"
+    ]
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyTransceiversManufacturers",
+    "categories": [
+      "hardware"
+    ],
+    "description": "Verifies if all the transceivers come from approved manufacturers.",
+    "result": "skipped",
+    "messages": [
+      "VerifyTransceiversManufacturers test is not supported on cEOSLab"
+    ],
+    "custom_field": "Accepted Manufacturers: 'Arista Networks', 'Arastra, Inc.', 'Not Present'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet1 - MLAG_leaf4_Ethernet1 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet2 - MLAG_leaf4_Ethernet2 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet3 - P2P_spine1_Ethernet5 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet4 - P2P_spine2_Ethernet5 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet5 - P2P_spine3_Ethernet5 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "failure",
+    "messages": [
+      "Ethernet6 - Status mismatch - Expected: up/up, Actual: down/down"
+    ],
+    "custom_field": "Interface Ethernet6 - P2P_spine4_Ethernet5 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Ethernet7 - SERVER_host3_Ethernet1 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Loopback0 - ROUTER_ID = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Loopback1 - VXLAN_TUNNEL_SOURCE = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Port-Channel1 - MLAG_leaf4_Port-Channel1 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Port-Channel7 - PortChannel host3 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vlan10 - DMZ = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vlan20 - Internal = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vlan3009 - MLAG_L3_VRF_VRF_A = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vlan4093 - MLAG_L3 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vlan4094 - MLAG = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyInterfacesStatus",
+    "categories": [
+      "interfaces"
+    ],
+    "description": "Verifies the operational states of specified interfaces to ensure they match expected configurations.",
+    "result": "success",
+    "custom_field": "Interface Vxlan1 = 'up'"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyMlagStatus",
+    "categories": [
+      "mlag"
+    ],
+    "description": "Verifies the health status of the MLAG configuration.",
+    "result": "success"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingProtocolModel",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies the configured routing protocol model.",
+    "result": "success",
+    "custom_field": "Routing protocol model: multi-agent"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.1 - Peer: leaf1"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.11 - Peer: spine1"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.12 - Peer: spine2"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.13 - Peer: spine3"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "failure",
+    "messages": [
+      "The following route(s) are missing from the routing table of VRF default: 192.168.101.14"
+    ],
+    "custom_field": "Route: 192.168.101.14 - Peer: spine4"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.2 - Peer: leaf2"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.3 - Peer: leaf3"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.101.4 - Peer: leaf4"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.102.1 - Peer: leaf1"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyRoutingTableEntry",
+    "categories": [
+      "routing"
+    ],
+    "description": "Verifies that the provided routes are present in the routing table of a specified VRF.",
+    "result": "success",
+    "custom_field": "Route: 192.168.102.3 - Peer: leaf3"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyNTP",
+    "categories": [
+      "system"
+    ],
+    "description": "Verifies if NTP is synchronised.",
+    "result": "success"
+  },
+  {
+    "name": "leaf3",
+    "test": "VerifyReloadCause",
+    "categories": [
+      "system"
+    ],
+    "description": "Verifies the last reload cause of the device.",
+    "result": "success"
+  }
+]

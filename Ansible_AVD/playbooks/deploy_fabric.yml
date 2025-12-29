@@ -1,0 +1,29 @@
+---
+- name: Deploy fabric to CVP
+  hosts: FABRIC
+  gather_facts: false
+#  connection: local
+  tasks:
+    - name: provision CVP with AVD configuration
+      ansible.builtin.import_role:
+        name: arista.avd.cv_deploy
+      vars:
+        container_root: 'FABRIC'
+        configlets_prefix: 'AVD'
+#       apply_mode: strict # Don't use this unless AVD is the only source of configlets
+        state: present
+        execute_tasks: true 
+        cv_submit_workspace: true
+# Force Workspace submission even if some devices are not streaming.
+# If set, configurations will not be validated for non-streaming devices.
+        cv_submit_workspace_force: true
+# Approve, start and wait for the Change Control to Complete. Otherwise the Change Control will be left in "pending approval" mode.
+# Only applicable if cv_submit_workspace is true.
+        cv_run_change_control: true
+        # Set to true if you want the change to be made without a change control approval
+#        cv_collection: v3
+        cv_server: "a27933-c415-1760369791-1-954fc845.topo.traininglabs.arista.com"
+        cv_token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkaWQiOjc0OTA1NjU5OTA5Mjk5MjQzMzIsImRzbiI6IkFuc2libGUiLCJkc3QiOiJhY2NvdW50IiwiZXhwIjoxNzY3OTk5NTk5LCJpYXQiOjE3NjY1MDMwNzgsIm9naSI6Mywib2duIjoiRGVmYXVsdCIsInNpZCI6IjRkN2U1NDk0OWMxMzJjOGYyNzdkNGQ1NzU5YTk3Nzk3YTM4NTg1NGM4MjRjNTIzZmUwYjQ4OWYwNzEzZmEyZDMtSEcwSVRhNHBIZ3p1eXNvSnVvMDhJTHFHQVlRVkJKemlBeGktT1RJbSJ9.QOcn30x066HEd3sbuirdDliZOGEU1-bwIfvZHYWuS1A6hoCp4UVs1ovIs2g_qHoIw5Zf44y9kF5kO11d7ZsnxW2xz_W2mI-mazk8ju40S4jSceypH3HMmqpsowE_NQipXi7PY1O7au0xszdiJYKvHCWFu-ycm1sPaBMV5Epx6lQQ6fozyPR6XnbLsZg2p3ML0UHUf5HrPgNgg3koCX1GsiRaDp5HaPqBgbhgdU3sDfcsUd4pmBE0Slcdar-ZoOpIh1M8fR0tiTOvkrTvyXgbx1sFOW0_bgrq0WS9-7Z7I6uajjbiXMvjWvSMJw33tutz04KqDItZUAP3mZgdu4KaD6CiX5HNlU7rZhI8lK2DRHFrGVf8CCyMNTudjlI0DSCepZHg5L4x4hoVcCGAljBnDiKiKJRaH_wHlYwvJ3deDfmu92p5T7hLySr-nobGSUyluzatgF5mBahuR2sWHJxGp-C94kzUAEGUfT05DtThs-MgRvs3kl1LTD1Zm8qBMVapC8C7r3baCHZ0Q5IW9o37DWs03NsnaFh4Rq2X5xy-t6RAPEZbKVdbJ0J9g2QS5G4UojLlmOXiA86InvJiFmAs-1qw__uIlG7IcUCiI6fuLfbFz59VdEfwQ4uMeTtTt4INKRNcWPtHOvg1gs1ls3sG2sMLfqs-BMRyJWYbuFdN-Nc"
+        cv_verify_certs: false
+
+
